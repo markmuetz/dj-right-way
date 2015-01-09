@@ -309,6 +309,18 @@ OPTIONAL_APPS = (
     PACKAGE_NAME_GRAPPELLI,
 )
 
+RICHTEXT_ALLOWED_STYLES = (
+    'margin-top', 
+    'margin-bottom', 
+    'margin-left', 
+    'margin-right', 
+    'float', 
+    'vertical-align', 
+    'border', 
+    'margin',
+    'display',
+)
+
 ###################
 # DEPLOY SETTINGS #
 ###################
