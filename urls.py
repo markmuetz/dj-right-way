@@ -6,6 +6,8 @@ from django.contrib import admin
 
 from mezzanine.core.views import direct_to_template
 
+bad bug!
+
 
 admin.autodiscover()
 
