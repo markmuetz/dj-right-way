@@ -1,0 +1,14 @@
+Followed instructions here to get things up and running: http://bscientific.org/blog/mezzanine-fabric-git-vagrant-joy/
+Involved getting virtualbox setup (straightforward), editing local_settings and adding the fabric details.
+Took a few hours to carry out instructions.
+
+These commands should work:
+
+workon dj-right-way
+vagrant up
+fab all
+fab deploy
+
+Then you will have to edit /etc/hosts and add in djrightway as an alias for localhost
+Then go to http://djrightway:8080/
+You should see a fully deployed mezzanine CMS.
