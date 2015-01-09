@@ -9,6 +9,6 @@ vagrant up
 fab all
 fab deploy
 
-Then you will have to edit /etc/hosts and add in djrightway as an alias for localhost
-Then go to http://djrightway:8080/
+Then you will have to edit /etc/hosts and add in djrightway as an alias for 192.168.33.10
+Then go to http://djrightway/
 You should see a fully deployed mezzanine CMS.
