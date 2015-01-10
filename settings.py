@@ -248,6 +248,7 @@ INSTALLED_APPS = (
     "mezzanine.pages",
     "mezzanine.galleries",
     "mezzanine.twitter",
+    "mezzanine_pagedown",
     #"mezzanine.accounts",
     #"mezzanine.mobile",
 )
@@ -320,6 +321,10 @@ RICHTEXT_ALLOWED_STYLES = (
     'margin',
     'display',
 )
+
+RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
+RICHTEXT_FILTERS = ('mezzanine_pagedown.filters.codehilite',)
+RICHTEXT_FILTER_LEVEL = 3
 
 ###################
 # DEPLOY SETTINGS #
