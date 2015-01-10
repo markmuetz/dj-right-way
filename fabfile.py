@@ -23,7 +23,13 @@ conf = {}
 if sys.argv[0].split(os.sep)[-1] in ("fab", "fab-script.py"):
     # Ensure we import settings from the current dir
     try:
-        conf = __import__("settings", globals(), locals(), [], 0).FABRIC
+        if len(env.hosts) > 0 and env.hosts[0] == 'prod':
+            print('DEPLOYING TO PRODUCTION')
+            conf = __import__("settings", globals(), locals(), [], 0).FABRIC
+        else:
+            print('DEPLOYING TO TESTING')
+            conf = __import__("settings", globals(), locals(), [], 0).FABRIC_TESTING
+
         try:
             conf["HOSTS"][0]
         except (KeyError, ValueError):
@@ -57,7 +63,6 @@ env.locale = conf.get("LOCALE", "en_US.UTF-8")
 
 env.secret_key = conf.get("SECRET_KEY", "")
 env.nevercache_key = conf.get("NEVERCACHE_KEY", "")
-
 
 ##################
 # Template setup #
