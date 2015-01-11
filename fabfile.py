@@ -10,9 +10,10 @@ from glob import glob
 from contextlib import contextmanager
 from posixpath import join
 
-from fabric.api import env, cd, prefix, sudo as _sudo, run as _run, hide, task
+from fabric.api import env, cd, prefix, sudo as _sudo, run as _run, hide, task, local
 from fabric.contrib.files import exists, upload_template
 from fabric.colors import yellow, green, blue, red
+from fabric.operations import get
 
 
 ################
@@ -322,6 +323,15 @@ def fixture_restore(filename):
     Restores the database from a fixture.
     """
     return manage("loaddata %s" % (filename))
+
+@task
+def copy_fixture():
+    """
+    Copies a fixture from the remote computer to the local one
+    """
+    fixture_name = 'fix.json'
+    fixture_backup(fixture_name)
+    get('%s' % (fixture_name))
 
 
 @task
