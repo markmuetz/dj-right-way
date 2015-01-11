@@ -309,6 +309,22 @@ def restore(filename):
 
 
 @task
+def fixture_backup(filename):
+    """
+    Backs up the database to a fixture.
+    """
+    return manage("dumpdata > %s" % (filename))
+
+
+@task
+def fixture_restore(filename):
+    """
+    Restores the database from a fixture.
+    """
+    return manage("loaddata %s" % (filename))
+
+
+@task
 def python(code, show=True):
     """
     Runs Python code in the project's virtual environment, with Django loaded.
