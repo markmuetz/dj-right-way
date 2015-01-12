@@ -347,17 +347,17 @@ except ImportError as e:
         raise e
 
 FABRIC = {
-    "SSH_USER": "vagrant", # SSH username for host deploying to
-    "HOSTS": 'localhost:2222', # List of hosts to deploy to (eg, first host)
-    "DOMAINS": ['djrightway'], # Domains for public site
+    "SSH_USER": "markmuetz", # SSH username for host deploying to
+    "HOSTS": 'vps130843.ovh.net', # List of hosts to deploy to (eg, first host)
+    "DOMAINS": ['djrightway_prod'], # Domains for public site
     "REPO_URL": "https://github.com/markmuetz/dj-right-way.git", # Project's repo URL
-    "VIRTUALENV_HOME":  "/home/vagrant", # Absolute remote path for virtualenvs
+    "VIRTUALENV_HOME":  "/home/markmuetz", # Absolute remote path for virtualenvs
     "PROJECT_NAME": "dj_right_way", # Unique identifier for project
     "REQUIREMENTS_PATH": "requirements.txt", # Project's pip requirements
     "GUNICORN_PORT": 8000, # Port gunicorn will listen on
     "LOCALE": "en_US.UTF-8", # Should end with ".UTF-8"
     "DB_PASS": "shiboleth", # Live database password
-    "ADMIN_PASS": "", # Live admin user password
+    "ADMIN_PASS": "shiboleth", # Live admin user password
     "SECRET_KEY": SECRET_KEY,
     "NEVERCACHE_KEY": NEVERCACHE_KEY,
 }
