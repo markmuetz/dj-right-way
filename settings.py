@@ -94,7 +94,7 @@ MANAGERS = ADMINS
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['dj-right-way.org']
+ALLOWED_HOSTS = ['djrightway_prod']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -355,7 +355,7 @@ FABRIC = {
     "PROJECT_NAME": "dj_right_way", # Unique identifier for project
     "REQUIREMENTS_PATH": "requirements.txt", # Project's pip requirements
     "GUNICORN_PORT": 8000, # Port gunicorn will listen on
-    "LOCALE": "en_US.UTF-8", # Should end with ".UTF-8"
+    "LOCALE": "en_GB.UTF-8", # Should end with ".UTF-8"
     "DB_PASS": "shiboleth", # Live database password
     "ADMIN_PASS": "shiboleth", # Live admin user password
     "SECRET_KEY": SECRET_KEY,
@@ -372,7 +372,7 @@ FABRIC_TESTING = {
     "PROJECT_NAME": "dj_right_way", # Unique identifier for project
     "REQUIREMENTS_PATH": "requirements.txt", # Project's pip requirements
     "GUNICORN_PORT": 8000, # Port gunicorn will listen on
-    "LOCALE": "en_US.UTF-8", # Should end with ".UTF-8"
+    "LOCALE": "en_GB.UTF-8", # Should end with ".UTF-8"
     "DB_PASS": "shiboleth", # Live database password
     "ADMIN_PASS": "", # Live admin user password
     "SECRET_KEY": SECRET_KEY,
