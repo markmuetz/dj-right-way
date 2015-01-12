@@ -349,7 +349,7 @@ except ImportError as e:
 FABRIC = {
     "SSH_USER": "markmuetz", # SSH username for host deploying to
     "HOSTS": 'vps130843.ovh.net', # List of hosts to deploy to (eg, first host)
-    "DOMAINS": ['*'], # Domains for public site
+    "DOMAINS": ['www.djrightway_prod.com'], # Domains for public site
     "REPO_URL": "https://github.com/markmuetz/dj-right-way.git", # Project's repo URL
     "VIRTUALENV_HOME":  "/home/markmuetz", # Absolute remote path for virtualenvs
     "PROJECT_NAME": "dj_right_way", # Unique identifier for project
