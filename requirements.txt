@@ -1,4 +1,4 @@
-Django==1.6.9
+Django==1.11.29
 Fabric==1.10.1
 Markdown==2.5.2
 Mezzanine==3.1.10
